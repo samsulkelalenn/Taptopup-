@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TapTopup - Top Up Game Termurah</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-white shadow p-4 text-center">
+    <h1 class="text-3xl font-bold text-green-600">TapTopup</h1>
+    <p class="text-sm text-gray-500">Top Up Game Termurah & Terlengkap</p>
+  </header>
+  <main class="max-w-xl mx-auto p-4">
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-4">Form Top Up</h2>
+      <form action="#" method="POST" class="space-y-4">
+        <select name="game" id="gameSelect" onchange="updateNominalOptions()" required class="select select-bordered w-full">
+          <option value="">Pilih Game</option>
+          <option value="Free Fire">Free Fire</option>
+          <option value="Mobile Legends">Mobile Legends</option>
+          <option value="Blood Strike">Blood Strike</option>
+          <option value="Bigo Live">Bigo Live</option>
+          <option value="Honor of Kings">Honor of Kings</option>
+          <option value="PUBG Mobile">PUBG Mobile</option>
+          <option value="Genshin Impact">Genshin Impact</option>
+          <option value="Honkai Star Rail">Honkai Star Rail</option>
+          <option value="The Ragnarok - Drop Ling GOC">The Ragnarok</option>
+          <option value="Call of Duty Mobile">Call of Duty Mobile</option>
+          <option value="Valorant">Valorant</option>
+          <option value="Delta Force - Steam">Delta Force</option>
+          <option value="Megic Chess: Go Go">Magic Chess</option>
+          <option value="Clash of Clans">Clash of Clans</option>
+          <option value="Roblox">Roblox</option>
+        </select>
+        <img id="gameImage" src="" alt="Game Image" class="mx-auto mb-4 w-60 h-auto rounded hidden">
+        <select name="nominal" id="nominalSelect" class="select select-bordered w-full" required>
+          <option value="">Pilih Nominal</option>
+        </select>
+        <input type="text" name="id" placeholder="ID / User ID" required class="input input-bordered w-full">
+        <input type="text" name="zone" placeholder="Zone ID (jika ada)" class="input input-bordered w-full">
+      </form>
+    </div>
+    <div class="bg-white p-6 mt-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-4">Upload Bukti Transfer</h2>
+      <form method="POST" enctype="multipart/form-data" action="upload.php" class="space-y-4">
+        <input type="text" name="order_id" placeholder="ID Pesanan" required class="input input-bordered w-full" />
+        <input type="file" name="bukti_transfer" accept="image/*" required class="file-input file-input-bordered w-full" />
+        <button type="submit" class="btn btn-primary w-full">Kirim Bukti Transfer</button>
+      </form>
+    </div>
+  </main>
+  <footer class="text-center text-sm text-gray-500 mt-8 mb-4">
+    &copy; 2025 TapTopup. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
